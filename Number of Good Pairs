@@ -1,0 +1,44 @@
+https://leetcode.com/problems/number-of-good-pairs/
+
+
+
+'''
+SOLUTION 1 : Time Complexity O(N^2) and Space Complexity O(1)
+
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        c = 0
+        for i in range(len(nums) -1):
+            for j in range(i+1, len(nums)):
+                if nums[i] == nums[j] and i < j:
+                    c +=1
+        return c
+
+
+SOLUTION 2 : Time Complexity O(N) and Space Complexity O(N)
+
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        goodpairs = {}
+        counter = 0
+        for i in nums:
+            if i in goodpairs:
+                counter+=goodpairs[i]
+                goodpairs[i]+=1
+            else:
+                goodpairs[i]=1
+        return counter
+'''
+SOLUTION 2 : Time Complexity O(N) and Space Complexity O(N)
+
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        goodpairs = {}
+        counter = 0
+        for i in nums:
+            if i in goodpairs:
+                counter+=goodpairs[i]
+                goodpairs[i]+=1
+            else:
+                goodpairs[i]=1
+        return counter
