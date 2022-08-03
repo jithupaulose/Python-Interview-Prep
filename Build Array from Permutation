@@ -1,0 +1,17 @@
+https://leetcode.com/problems/build-array-from-permutation/
+
+'''
+SOLUTION : TIME COMPLEXITY : O(N)  & SPACE COMPLEXITY O(1)
+
+for i in range(len(nums)) = for i in nums
+'''
+
+
+class Solution:
+    def buildArray(self, nums: List[int]) -> List[int]:
+        finalNums = []
+        for i in nums:
+            finalNums.append(nums[i])
+        return finalNums
+    
+    
