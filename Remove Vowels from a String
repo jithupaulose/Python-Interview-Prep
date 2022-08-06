@@ -1,0 +1,11 @@
+https://leetcode.com/problems/remove-vowels-from-a-string/
+
+class Solution:
+    def removeVowels(self, s: str) -> str:
+        newlist = ''
+        for i in s:
+            if i not in [ 'a', 'e', 'i', 'o', 'u']:
+                newlist+=i
+        return newlist
+                
+        
