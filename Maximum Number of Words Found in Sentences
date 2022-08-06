@@ -1,0 +1,10 @@
+https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
+
+class Solution:
+    def mostWordsFound(self, sentences: List[str]) -> int:
+        maxlist = []
+        for i in sentences:
+            maxlist.append(len(i.split()))
+        return max(maxlist)
+            
+        
