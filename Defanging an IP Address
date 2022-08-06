@@ -1,0 +1,18 @@
+https://leetcode.com/problems/defanging-an-ip-address/
+
+
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        addresslist = list(address)
+        finaladdress = ''
+        for i in range(len(addresslist)):
+            if addresslist[i] == '.':
+                addresslist[i] = '[.]'
+        return finaladdress.join(addresslist)
+        
+        
+        
+        
+        
+        # return address.replace('.','[.]')
+        
