@@ -18,3 +18,15 @@ class Solution(object):
             if s[i] not in ('aeiou'):
                 result.append(s[i])
         return ''.join(result)
+
+
+SOLUTION 3:
+
+class Solution(object):
+    def removeVowels(self, s):
+        vovels = set('aeiou')
+        result = ''
+        for i in s:
+            if i not in vovels:
+                result += i
+        return result
