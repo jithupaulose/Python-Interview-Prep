@@ -9,3 +9,13 @@ class Solution:
             if operations[i] in ['X--', '--X']:
                 x-=1
         return x
+
+
+
+class Solution(object):
+    def finalValueAfterOperations(self, operations):
+        output = 0
+        mydict = {"++X":1,"X++":1,"--X":-1,"X--":-1} 
+        for i in operations:
+            output += mydict[i]
+        return output
