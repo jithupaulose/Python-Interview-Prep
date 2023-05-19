@@ -1,4 +1,4 @@
-https://leetcode.com/problems/single-row-keyboard/
+# https://leetcode.com/problems/single-row-keyboard/
 
 class Solution(object):
     def calculateTime(self, keyboard, word):
